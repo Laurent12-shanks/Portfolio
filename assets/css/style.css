@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+.home-img img{
+    border: 2px solid rgb(6, 7, 7);
+    border-top-right-radius: 40% ;
+}
+
+body{
+    background: #1f242d;
+    color:white ;
+}
+
+.header {
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100; 
+}
+
+.logo {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s  ease forwards;
+}
+
+.navbar a{
+    display: inline-block;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left :35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s  ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.navbar{
+    margin-right:20px ;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color:#0ef;
+}
+
+.home{
+    position:relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 10% 0;
+
+}
+
+.home-content{
+    max-width: 600px;
+}
+
+.home-content h3{
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s  ease forwards;
+    animation-delay: 0.7s;
+}
+
+.home-content h3:nth-of-type(2){
+    margin-bottom: 30px;
+    animation: slideTop 1s  ease forwards;
+    animation-delay: 0.7s;
+}
+
+.home-content h3 span{
+    color: #0ef;
+
+}
+
+
+.home-content h1{
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideRight 1s  ease forwards;
+    animation-delay: 1s;
+}
+.home-img img{
+    max-width: 450px;
+    margin-right: -20px;
+    opacity: 0;
+    animation: ZoomIn 1s  ease forwards;
+    animation-delay: 2s;
+}
+
+.home-content p{
+    font-size: 20px;
+    opacity: 0;
+    animation: slideLeft 1s  ease forwards;
+    animation-delay: 1s;
+}
+
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color:#0ef;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: 1s ;
+    opacity: 0;
+    animation: slideLeft 1s  ease forwards;
+    animation-delay: calc(.2s * var(--i));
+
+
+}
+
+.social-media a:hover{
+    background: #0ef;
+    color: #1f242d;
+    box-shadow: 0 0 20px #0ef;
+}
+
+.btn{
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    box-shadow: 0 0 10px #0ef;
+    font-size: 16px;
+    color: #1f242d;
+    letter-spacing: 1px;
+    text-decoration:none ;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s  ease forwards;
+    animation-delay: 2s;
+}
+
+/* footer*/
+footer{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+
+    background-color: #282c34;
+    color: #aaaaaa; 
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid #444;
+    border-radius: 10%;
+}
+
+.footer-container{
+    max-width: 1200px;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.footer-container a{
+    color: #0ef;
+    text-decoration: none;
+}
+
+/*KEYFRAMES ANIMATIONS*/
+
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes slideTop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes ZoomIn{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+/*Les medias Queries */
+/*mobile*/
+@media (max-width: 768px) {
+
+    .header {
+        padding: 15px 5%;
+    }
+
+    .navbar {
+        display: none; 
+    }
+
+    .home {
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        padding: 120px 5% 60px;
+        text-align: center;
+    }
+
+    .home-content {
+        max-width: 100%;
+    }
+
+    .home-content h3 {
+        font-size: 20px;
+    }
+
+    .home-content h1 {
+        font-size: 36px;
+    }
+
+    .home-content p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .home-img {
+        margin-top: 40px;
+    }
+
+    .home-img img {
+        max-width: 260px;
+        margin: 0;
+    }
+
+
+    .social-media {
+        display: flex;
+        justify-content: center;
+    }
+
+    .social-media a {
+        margin: 20px 10px;
+    }
+
+
+    footer {
+        border-radius: 0;
+        margin: 0;
+    }
+
+    .footer-container {
+        font-size: 14px;
+
+    }
+}
+
+@media (min-width: 755px) and (max-width: 1024px) {
+
+    .home {
+        padding: 100px 8% 0;
+    }
+
+    .home-content h1 {
+        font-size: 46px;
+    }
+
+    .home-content h3 {
+        font-size: 26px;
+    }
+
+    .home-img img {
+        max-width: 360px;
+    }
+
+    .navbar a {
+        margin-left: 20px;
+        font-size: 16px;
+    }
+}
+
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+
+    .home {
+        padding: 120px 10% 0;
+    }
+
+    .home-content h1 {
+        font-size: 56px;
+    }
+
+    .home-img img {
+        max-width: 450px;
+    }
+}
+
+
+
