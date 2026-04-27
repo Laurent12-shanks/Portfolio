@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#0f172a"></rect>
+  
+  <!-- Shield -->
+  <path d="M32 6 L52 14 V30 C52 44 42 54 32 58 C22 54 12 44 12 30 V14 Z" fill="#22c55e"></path>
+  
+  <!-- Letter L -->
+  <path d="M26 18 H30 V42 H40 V46 H26 Z" fill="#0f172a"></path>
+</svg>
